@@ -15,7 +15,7 @@ const login = (req, res) => {
         if (err) res.json(err);
         if (response) {console.log(result);
           const payload = {
-            userId: result[0].id,
+            userId: result[0].UserID,
                       };
           const secret = process.env.SECRET;
 
