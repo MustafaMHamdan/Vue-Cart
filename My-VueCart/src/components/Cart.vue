@@ -57,6 +57,7 @@ export default {
       this.$emit("removeItemFromCart", id);
       this.Cart = this.Cart.filter((product) => product.id !== id)
       localStorage.setItem("cart",JSON.stringify(this.Cart ));
+      
     },
   },
   async mounted() {
