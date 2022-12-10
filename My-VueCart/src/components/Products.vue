@@ -5,9 +5,9 @@
       <div v-for="(product, index) in products" :key="index">
         <img class="proImage" :src="product.image" />
         <h3>{{ product.title }}</h3>
-        <div class="cost">{{ product.price }}</div>
+        <div class="cost">Price:{{ product.price }}</div>
       
-        <button v-on:click="addItemToCart(product.productID)">Add to cart</button>
+        <button class="add" v-on:click="addItemToCart(product.productID)">Add to cart</button>
       </div>
     </div>
   </div>
@@ -45,4 +45,33 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+*{
+  margin: 0;
+padding:0
+}
+
+.products{
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+
+
+
+
+.add{
+  padding: 10px;
+  background-color: rgb(50, 134, 123);
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+
+}
+
+
+</style>

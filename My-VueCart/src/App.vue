@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <div class="container">
     <header>
       <button v-on:click="navigateTo('products')">View products</button>
-       {{cart.length}} in cart
+      
+      <p> in cart</p>
+      
+     
       <button v-on:click="navigateTo('cart')">View Cart</button>
       <button v-on:click="navigateTo('register')">Sign Up</button>
 
@@ -38,7 +41,7 @@ export default {
   data: () => {
     return {
       page: "products",
-      cart:JSON.parse(localStorage.getItem("cart")),
+      cart: JSON.parse(localStorage.getItem("cart")),
       token: localStorage.getItem("token"),
       id: "",
     };
@@ -76,12 +79,9 @@ export default {
         )
         .then((result) => {
           console.log(id);
-          
-         
         })
         .catch((err) => {
           console.log(err);
-         
         });
     },
     navigateTo(page) {
@@ -97,50 +97,46 @@ export default {
 </script>
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
 .product-main {
   display: grid;
 }
 
-.products {
-  display: flex;
-  flex-direction: row;
-}
-
-.products button {
-  padding: 10px;
-  background-color: black;
-  color: white;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-
 .proImage {
   width: 10vw;
   height: 20vh;
 }
-</style>
 
-<style scoped>
 header {
-  height: 60px;
-  width: 100%;
   box-shadow: 2px 2px 5px blue;
   background-color: black;
-  text-align: right;
-  font-size: 30px;
-  padding-top: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+color:white ;
+  height: 5rem;
+  width: 100vw;
+  font-size: 1.2rem;
 }
 
 header button {
-  padding: 10px;
-  border: none;
   cursor: pointer;
   color: white;
-  background-color: green;
+  background-color: blue;
 }
+
+p{
+
+padding: 24px;
+
+}
+
+
+
 </style>

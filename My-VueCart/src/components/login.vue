@@ -7,10 +7,10 @@
 
       <input placeholder="password" v-model="password" /><br />
 
-      <button type="submit">Sign In</button>
+      <button type="submit">Login</button>
       
     </form>
-    <button v-on:click="logOut">Log Out</button>
+  
   </div>
 </template>
 
@@ -44,4 +44,31 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input{
+  margin: 1rem;
+  background-color: rgba(128, 128, 128, 0.164);
+  align-items: center;
+  align-content: center;
+  text-align: start;
+  width: 75%;
+  height: 2rem;
+  padding: 0.4rem;
+  margin: 0.8rem;
+  border-style: none;
+  position: relative;
+  bottom: 1rem;
+}
+
+
+
+
+
+
+</style>

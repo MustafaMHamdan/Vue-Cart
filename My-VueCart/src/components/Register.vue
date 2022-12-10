@@ -68,12 +68,30 @@ export default {
 <style scoped>
 button,
 input {
-  display: block;
-  margin-bottom: 10px;
+  margin: 1rem;
+  background-color: rgba(128, 128, 128, 0.164);
+  align-items: center;
+  align-content: center;
+  text-align: start;
+  width: 75%;
+  height: 2rem;
+  padding: 0.4rem;
+  margin: 0.8rem;
+  border-style: none;
+  position: relative;
+  bottom: 1rem;
 }
 
 #alert {
   color: red;
   margin-bottom: 10px;
 }
+
+
+
+ 
+
+
+
+
 </style>

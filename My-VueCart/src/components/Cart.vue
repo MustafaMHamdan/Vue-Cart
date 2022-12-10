@@ -5,7 +5,7 @@
       <div v-for="(product, index) in Cart" :key="index">
         <img class="proImage" :src="product.image" />
         <h3>{{ product.title }}</h3>
-        <div>{{ product.price }}</div>
+        <div>Price:{{ product.price }}</div>
 
         <button v-on:click="removeItemFromCart(product.id)">
           Remove from cart
@@ -63,4 +63,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+*{
+  margin: 0;
+padding:0
+}
+
+
+
+
+</style>
