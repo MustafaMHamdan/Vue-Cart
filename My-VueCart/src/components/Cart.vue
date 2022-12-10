@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cartContainer" >
     <h1>Your Cart</h1>
     <div class="products">
       <div v-for="(product, index) in Cart" :key="index">
@@ -12,9 +12,11 @@
         </button>
       </div>
       <br> 
-      <h1 >Total:{{Total}}</h1><br> <br> 
-      <h1>Quantity:{{Quantity}}</h1>
+   
     </div>
+    <br> <br> 
+    <h1 >Total  :{{Total}}</h1><br> <br> 
+    <h1>Quantity:{{Quantity}}</h1>
   </div>
 </template>
 
@@ -69,7 +71,11 @@ export default {
 padding:0
 }
 
+.cartContainer{
+display: flex;
+flex-direction: column;
 
+}
 
 
 </style>
