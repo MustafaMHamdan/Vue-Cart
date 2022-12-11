@@ -6,7 +6,7 @@ USE Vue_Cart;
 
 CREATE TABLE users(
     UserID INT AUTO_INCREMENT NOT NULL,
-    name VARCHAR(255),
+    userName VARCHAR(255),
     phone VARCHAR(255),
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255),
@@ -27,6 +27,7 @@ CREATE TABLE cart(
     id INT AUTO_INCREMENT NOT NULL,
     BuyerId INT,
     productId INT,
+    quantity INT DEFAULT 1 ,
     FOREIGN KEY (BuyerId) REFERENCES users(UserID),
     FOREIGN KEY (productId) REFERENCES products(productID),
     is_deleted TINYINT DEFAULT 0,

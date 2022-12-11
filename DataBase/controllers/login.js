@@ -21,7 +21,7 @@ const login = (req, res) => {
 
           const token = jwt.sign(payload, secret);
 
-          res.status(200).json({ token });
+          res.status(200).json({ token,result });
         } else {
          return res.status(403).json({
             success: false,

@@ -4,19 +4,26 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 const register = async (req, res) => {
-  const { name, phone, email, password } =
+  const { userName, phone, email, password } =
     req.body;
 
   const encryptedPassword = await bcrypt.hash(password, saltRounds);
 
-  const query = `INSERT INTO users (name,phone, email ,password) VALUES (?,?,?,?)`;
+  const query = `INSERT INTO users (userName,phone, email ,password) VALUES (?,?,?,?)`;
   const data = [
-    name,phone,
+    userName,phone,
        email,
     encryptedPassword,
      
   ];
   connection.query(query, data, (err, result) => {
+
+
+
+
+    
+
+
     if (err) {
     return  res.status(409).json({
         success: false,
